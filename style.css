@@ -11,24 +11,29 @@ header{
     border: 5px solid rgb(11, 12, 22);
 
 }
-main{
+
+main {
     background-color: white;
     color: rgb(1, 1, 12);
     margin: 0 auto;
     padding: 16px;
     display: flex
 } 
-article{
+
+article {
     display: flex;
 }
-img{
+
+img {
     width:300px ;
     height: 300px;
     border-right: 25px;
 }
+
 .artigo-autor  {
     font-weight: bold;
 }
-article{
+
+article {
     padding-bottom: 50px;
 }
