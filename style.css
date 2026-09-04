@@ -1,48 +1,104 @@
+:root {
+  --cor-primaria: darkred;
+  --cor-secundaria: rgb(90, 1, 1);
+  --cor-fundo: #ffffff;
+  --cor-texto: rgb(22, 21, 21);
+  --cor-contraste: #ffffff;
+  --cor-botao: rgb(216, 59, 59);
+  --cor-border: rgb(248, 171, 171);
+  --fonte-texto: 'Segoe UI', sans-serif;
+}
+
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Redefinição de variáveis para o Modo Escuro */
+.tema-escuro {
+  --cor-primaria: #b30000;
+  --cor-secundaria: #ff6b6b;
+  --cor-fundo: #121212;      /* Fundo escuro */
+  --cor-texto: #e0e0e0;      /* Texto claro */
+  --cor-contraste: #ffffff;
+  --cor-botao: #4a1515;
+  --cor-border: #5c1d1d;
+}
+
 body {
-    max-width: 100vw;
+  max-width: 100vw;
+  font-family: var(--fonte-texto);
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  margin: 0;
 }
 
-header{ 
-background-color: darkred;
-color: white;
-text-align: center;
-margin: 0 auto;
-padding: 16px;
-border: 5px solid  rgb(90, 1, 1);
- 
+header {
+  background-color: var(--cor-primaria);
+  color: var(--cor-contraste); /* Corrigido: era --cor-constraste */
+  text-align: center;      
+  margin: 0 auto;
+  padding: 16px;
+  border: 5px solid var(--cor-border);
 }
-main{
-    background-color: white;
-    color: darkred;
-margin: 0 auto;
-padding: 16px;
 
-display: flex;
-flex-wrap: wrap;
-} 
-article{
-    display: flex;
-
-    border: 2px solid  rgb(90, 1, 1);
-    margin: 16px;
-    gap: 16px;
-    padding: 16px;
-
-    flex: 1 1 25%;
-
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
+header p {
+  color: var(--cor-contraste);
 }
-img{
-    width:300px ;
-    height: 300px;
-    border-right: 25px;
+
+main {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.artigo-autor  {
-    font-weight: bold;
+
+article {
+  display: flex;
+  background-color: var(--cor-fundo);
+  box-shadow: 0 2px 6px var(--cor-primaria);
+  border-radius: 8px;
+  margin: 16px;
+  gap: 16px;
+  padding: 16px;
+  flex: 1 1 300px; /* Largura base responsiva */
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
-article{
-    padding-bottom: 50px;
+
+img {
+  width: 120px;
+  height: 120px; 
+  object-fit: cover; /* Evita que a foto fique esticada */
+  border-radius: 50%; /* Deixa as fotos de perfil arredondadas */
+}
+
+.artigo-autor {
+  font-weight: bold;
+}
+
+/* Estilo para os botões do blog */
+button {
+  background-color: var(--cor-botao);
+  color: var(--cor-contraste);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 2px;
+}
+
+/* Estilo do botão flutuante/fixo do modo escuro */
+.btn-modo-escuro {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+  padding: 10px 15px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
