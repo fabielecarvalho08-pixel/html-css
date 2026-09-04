@@ -1,4 +1,4 @@
- // 1. Seleciona APENAS os botões de reação dentro dos artigos
+// 1. Seleciona APENAS os botões de reação dentro dos artigos
 const botoesReacao = document.querySelectorAll("article button");
 
 botoesReacao.forEach(function (botao) {
